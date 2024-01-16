@@ -105,8 +105,8 @@ header span {
     align-items: center;
 }
 
-input[type="text"],
-select {
+header [type="text"],
+header select {
     padding: 16px;
     margin: 20px;
     border: 0;
@@ -114,7 +114,7 @@ select {
     background: #FFF;
 }
 
-input[type="submit"] {
+header input[type="submit"] {
     padding: 16px;
     margin: 20px;
     color: #FFF;
@@ -138,7 +138,7 @@ input[type="submit"] {
 }
 
 /* why-choose-us section */
-.why-choose-us{
+.why-choose-us {
     text-align: center;
 }
 
@@ -147,12 +147,13 @@ input[type="submit"] {
     font-size: 1.5rem;
     font-weight: 800;
 }
-.cards{
+
+.cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 24px;
-    
+
 }
 
 .card {
@@ -175,23 +176,71 @@ input[type="submit"] {
     border: 1px solid rgba(233, 68, 68, 0.20);
     background: rgba(233, 68, 68, 0.05);
 }
-.cards > :nth-child(3) {
-    grid-column: span 2;  
-    justify-self: center; 
-    width: 50%; 
+
+.cards> :nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    width: 50%;
     box-sizing: border-box;
 }
+
 /* perfect-place section */
-.perfect-place-container{
+.perfect-place-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 28px;
 }
-.perfect-place-container video{
+
+.perfect-place-container video {
     max-width: 610px;
     border-radius: 1rem;
 }
 
+/* newsletter section */
+.newsletter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.newsletter-form {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+}
+
+.newsletter-form>input[type="text"],
+.newsletter-form>input[type="email"] {
+    padding: 1rem;
+    border: 0;
+    width: 90%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+}
+
+.newsletter-form>input[type="submit"] {
+    color: #FFF;
+    text-align: center;
+    padding: 0.8rem;
+    width: 90%;
+    border-radius: 8px;
+    border: 0;
+    font-size: 1.5rem;
+    background: #FF5400;
+    cursor: pointer;
+}
+
+.newsletter img {
+    max-width: 670px;
+
+}
+
+.hide {
+    display: none;
+}
 
 /* responsiveness */
 /* mobile and smaller devices */
@@ -214,19 +263,27 @@ input[type="submit"] {
     .banner-form,
     .popular-tour,
     .cards,
-    .perfect-place-container
-    {
+    .perfect-place-container,
+    .newsletter {
         grid-template-columns: 1fr;
     }
 
-    .cards > :nth-child(3) {
-        grid-column: span 1;  
+    .cards> :nth-child(3) {
+        grid-column: span 1;
         width: 100%;
     }
+
     .popular-tour img,
-    .perfect-place-container video
-    {
+    .perfect-place-container video,
+    .newsletter-form,
+    .newsletter img,
+    .newsletter-form>input {
         width: 100%;
+    }
+
+    .newsletter-form {
+        padding: 10px;
+        width: 95%;
     }
 
 
