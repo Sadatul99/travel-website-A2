@@ -46,6 +46,7 @@ section {
     background: #FF5400;
     padding: 15px 35px;
     border-radius: 8px;
+    margin-top: 30px;
     border: 0;
 }
 
@@ -180,6 +181,16 @@ input[type="submit"] {
     width: 50%; 
     box-sizing: border-box;
 }
+/* perfect-place section */
+.perfect-place-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 28px;
+}
+.perfect-place-container video{
+    max-width: 610px;
+    border-radius: 1rem;
+}
 
 
 /* responsiveness */
@@ -202,7 +213,8 @@ input[type="submit"] {
 
     .banner-form,
     .popular-tour,
-    .cards
+    .cards,
+    .perfect-place-container
     {
         grid-template-columns: 1fr;
     }
@@ -211,7 +223,9 @@ input[type="submit"] {
         grid-column: span 1;  
         width: 100%;
     }
-    .popular-tour img {
+    .popular-tour img,
+    .perfect-place-container video
+    {
         width: 100%;
     }
 
