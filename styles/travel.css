@@ -5,6 +5,7 @@
 * {
     font-family: 'Mulish', sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 
 header,
@@ -138,6 +139,25 @@ header input[type="submit"] {
     gap: 50px;
 }
 
+/* choose destination section */
+
+.img-container{
+    display: grid;
+    gap: 24px;
+    
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(3);
+    width: 100%;
+    height: auto; 
+    gap: 24px;
+}
+.row img{
+    object-fit: cover;
+}
+
+
 /* why-choose-us section */
 .why-choose-us {
     text-align: center;
@@ -235,19 +255,36 @@ header input[type="submit"] {
 }
 
 .newsletter img {
-    max-width: 670px;
-    position: relative;
+    /* max-width: 670px; */
+    max-width: 100%;
+    height: auto;
+}
 
+.discount {
+    position: relative;
 }
 
 .save-70 {
     color: #FFF;
     position: absolute;
+    bottom: 11%; /* Adjust the bottom value for your preferred spacing from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(7%) rotate(-19.628deg);
     padding: 20px;
-    transform: rotate(-19.628deg);
+    /* transform: rotate(-19.628deg); */
     border-radius: 16px;
     background: #FF5400;
     box-sizing: border-box;
+}
+
+.save-70 h3 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.web-address {
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .hide {
@@ -320,6 +357,9 @@ footer {
     .newsletter-form {
         padding: 10px;
         width: 95%;
+    }
+    .save-70{
+        display: none;
     }
 
     footer {
